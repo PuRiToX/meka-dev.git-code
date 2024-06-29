@@ -3,30 +3,30 @@ import PostLayout from '../layouts/PostLayout.astro';
 import Card from '../components/Card.astro';
 import HeaderSimplify from '../components/HeaderSimplify.astro';
 import ContainerGrid from '../components/ContainerGrid.astro';
-
 ---
 
 <PostLayout title="Meka.dev | Posts">
 	
-    <HeaderSimplify pagina="Posts" slot="header"/>
-    <div>
+    <HeaderSimplify pagina="Cursos" slot="header"/>
+
+    <div class="mt-20">
         
+        <ContainerGrid tittle='Curos Recientes' explora='' href=''>
+            <Card link="/courses/Python" picture='photos/courses/Python.png' tittle='Curso de Python' description='Recopilacion de posts de Meka.Dev acerca de Python' etiquetas={["Programacion", "Python"]}/>
+
+            <Card link="/courses/JavaScript" picture='photos/courses/JavaScript.png' tittle='Curso de JavaScript' description='Recopilacion de posts de Meka.Dev acerca de JS' etiquetas={["Programacion", "JS"]}/>
+
+            <Card link="/courses/HTML" picture='photos/courses/HTML.png' tittle='Curso de HTML' description='Recopilacion de posts de Meka.Dev acerca de HTML' etiquetas={["Programacion", "HTML"]}/>
+        </ContainerGrid>
         
-        <ContainerGrid tittle='Posts Recientes' explora='' href=''>
+        <ContainerGrid tittle='Cursos' explora='' href=''>
+            <Card link='' picture=' ../Red.jpg' tittle='Un post' description='Esto es una pruebade un post' etiquetas={["Programacion", "Python", "C++"]}/>
+            <Card link='' picture=' ../Red.jpg' tittle='Un post' description='Esto es una pruebade un post' etiquetas={["Programacion", "Python", "C++"]}/>
+            <Card link='' picture=' ../Red.jpg' tittle='Un post' description='Esto es una pruebade un post' etiquetas={["Programacion", "Python", "C++"]}/>
             <Card link='' picture=' ../Red.jpg' tittle='Un post' description='Esto es una pruebade un post' etiquetas={["Programacion", "Python", "C++"]}/>
             <Card link='' picture=' ../Red.jpg' tittle='Un post' description='Esto es una pruebade un post' etiquetas={["Programacion", "Python", "C++"]}/>
             <Card link='' picture=' ../Red.jpg' tittle='Un post' description='Esto es una pruebade un post' etiquetas={["Programacion", "Python", "C++"]}/>
         </ContainerGrid>
-        
-        <ContainerGrid tittle='Posts' explora='' href=''>
-            <Card link='' picture=' ../Red.jpg' tittle='Un post' description='Esto es una pruebade un post' etiquetas={["Programacion", "Python", "C++"]}/>
-            <Card link='' picture=' ../Red.jpg' tittle='Un post' description='Esto es una pruebade un post' etiquetas={["Programacion", "Python", "C++"]}/>
-            <Card link='' picture=' ../Red.jpg' tittle='Un post' description='Esto es una pruebade un post' etiquetas={["Programacion", "Python", "C++"]}/>
-            <Card link='' picture=' ../Red.jpg' tittle='Un post' description='Esto es una pruebade un post' etiquetas={["Programacion", "Python", "C++"]}/>
-            <Card link='' picture=' ../Red.jpg' tittle='Un post' description='Esto es una pruebade un post' etiquetas={["Programacion", "Python", "C++"]}/>
-            <Card link='' picture=' ../Red.jpg' tittle='Un post' description='Esto es una pruebade un post' etiquetas={["Programacion", "Python", "C++"]}/>
-        </ContainerGrid>
-    
     </div>
 </PostLayout>
 

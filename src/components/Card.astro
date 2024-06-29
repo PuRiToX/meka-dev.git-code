@@ -4,7 +4,8 @@ interface Props {
     tittle: string,
     description: string,
     etiquetas: Array<string>,
-    link: string
+    link: string,
+    
 }
 
 const { tittle, description, picture, etiquetas, link} = Astro.props
@@ -17,7 +18,7 @@ etiquetas.map((etiqueta) =>{
 
 ---
 
-<a href={link} class=" rounded-lg border shadow-md bg-gray-800 border-gray-700 transition flex flex-col p-4 pb-6 duration-200 ease-in-out hover:scale-100 scale-90 gap-x-2 opacity-90 hover:opacity-100 cursor-pointer">
+<a href={link} class=" rounded-lg border shadow-md bg-neutral-600 bg-opacity-25  border-neutral-700 transition flex flex-col p-4 pb-6 duration-200 ease-in-out hover:scale-100 scale-90 gap-x-2 opacity-90 hover:opacity-100 cursor-pointer">
     
     
     
@@ -38,7 +39,7 @@ etiquetas.map((etiqueta) =>{
     </div>
     
     
-    <h1 class=" mt-5 font-bold text-xl tracking-tight">{tittle}</h1>
+    <h1 class=" mt-2 mb-1 font-bold text-xl tracking-tight">{tittle}</h1>
     <p class=" text-sm text-gray-400">{description}</p>
 
 </a>

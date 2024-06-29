@@ -1,14 +1,25 @@
 ---
 interface Props {
-    href: string    
+    title: string,
+    href: string,
+    responsive: boolean
 }
 
-const {href} = Astro.props
+const {href, responsive, title} = Astro.props
+
 ---
 
-<a class="    text-white cursor-pointer hover:bg-slate-700 focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 font-medium rounded-lg px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#1da1f2]/55 mr-2 hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-90 scale-80 text-base gap-x-2 opacity-90 hover:opacity-100" href={href}>
-    
-    <slot name="before-text" />
-    <slot />
-    <slot name="after-text" />
-</a>
+
+    <a title={title} class="text-white cursor-pointer hover:bg-orange-800 font-medium rounded-lg px-5 py-2.5 text-center inline-flex items-center  mr-2 hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-90 scale-80 tex-base gap-x-2 opacity-90 hover:opacity-100" href={href}>
+        
+        
+
+        <slot name="before-text" />
+        
+        
+        <div class="hidden lg:block">
+
+            <slot />
+        </div>
+        <slot name="after-text" />
+    </a>

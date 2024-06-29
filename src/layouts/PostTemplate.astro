@@ -1,14 +1,13 @@
 ---
-import HeaderComplete from '../components/HeaderComplete.astro';
 import Footer from '../components/Footer.astro';
 import HeaderSimplify from '../components/HeaderSimplify.astro';
 
 interface Props {
 	title: string;
-    
+    subtitleHeader:string
 }
 
-const { title } = Astro.props;
+const { title, subtitleHeader } = Astro.props;
 ---
 
 <!doctype html>
@@ -22,10 +21,10 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	
 	</head>
-	<body class=" bg-gray-900">
+	<body class="" style="background-color: #202020;">
 		
 		<div class=" bg-neutral-900">
-		<HeaderSimplify pagina="Post">
+		<HeaderSimplify pagina={subtitleHeader}>
 			
 		</div>
 		<main class=" py-4 mx-auto">
