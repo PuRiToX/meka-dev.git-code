@@ -5,17 +5,18 @@ import HeaderButtom from "./HeaderButtom.astro"
 <header class="fixed w-screen bg-neutral-900 z-10">
 
     <div class=" sm:p-6 p-3">
-        <div class="flex flex-col sm:flex-row sm:justify-between">
+        <div class="flex flex-row justify-between">
+            
             <div class="flex justify-center sm:justify-normal items-center ">
-                <img class="w-8 h-8 mr-4 " src="LogoTransparencia.png" alt="">
+                <img class="w-8 h-8 mr-4 " src="/LogoTransparencia.png" alt="">
                 <a class="text-4xl sm:text-3xl tracking-tight font-bold block text-white hover:relative hover:-translate-y-1 transition-all duration-500 ease-in-out" href="/">
                     Me<span class=" text-orange-600">k</span>a.dev 
                     </a>
             </div>
        
-            <div class="flex justify-center sm:mt-0 mt-2">
+            <div class="flex justify-center px-4 sm:mt-0 mt-2">
 
-                <HeaderButtom title="Explora Nuestro Contenido" responsive={false} href="/posts">
+                <HeaderButtom title="Explora Nuestro Contenido" href="/posts">
                     <svg slot="before-text" class="w-7 h-7 md:h-10 md:w-10" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                         <path d="M6 4h11a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-11a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1m3 0v18" />
@@ -26,7 +27,7 @@ import HeaderButtom from "./HeaderButtom.astro"
                     Explora Nuestro Contenido
                 </HeaderButtom>
         
-                <HeaderButtom title="Sobre Nosotros" responsive={false} href="/about">
+                <HeaderButtom title="Sobre Nosotros" href="/about">
                     <svg slot="before-text" class="w-7 h-7 md:h-10 md:w-10" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                         <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
@@ -37,21 +38,11 @@ import HeaderButtom from "./HeaderButtom.astro"
                     Sobre Nosotros
                 </HeaderButtom>
         
-                <HeaderButtom title="Envíanos un Correo" responsive={false}  href="mailto:mekadev.feedback@gmail.com">
-                    <svg slot="before-text" class="w-7 h-7 md:h-10 md:w-10" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M12 18h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v7.5" />
-                        <path d="M3 6l9 6l9 -6" />
-                        <path d="M15 18h6" />
-                        <path d="M18 15l3 3l-3 3" />
-                      </svg>
-                      
-                    Envíanos un Correo
-                </HeaderButtom>
+               
             </div>
         </div>
     </div>
     <div class="sm:block hidden bg-neutral-800 p-1.5">
-        <p class="text-center mx-auto text-gray-300  text-md font-light">Agencia de coding dirigida generalmente a programadores principiantes que necesitan aprender a programar de manera <span class=" text-orange-600">rápida</span> y <span class=" text-orange-600">sencilla</span>.</p>
+        <p class="text-center mx-auto text-gray-300  text-md font-light">Agencia de coding dirigida generalmente a programadores principiantes. <span> Programar es divertido si es con nosotros. </span>
     </div>
 </header>

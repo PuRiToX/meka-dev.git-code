@@ -2,20 +2,20 @@
 interface Props {
     title: string,
     href: string,
-    responsive: boolean
 }
 
-const {href, responsive, title} = Astro.props
+const {href, title} = Astro.props
 
 ---
 
 
-    <a title={title} class="text-white cursor-pointer hover:bg-orange-800 font-medium rounded-lg px-5 py-2.5 text-center inline-flex items-center  mr-2 hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-90 scale-80 tex-base gap-x-2 opacity-90 hover:opacity-100" href={href}>
+    <a title={title} class="text-white cursor-pointer font-medium rounded-lg px-2 py-2.5 text-center inline-flex items-center  mr-0  transition-all duration-200 ease-in-out max-sm:duration-500 max-sm:hover:bg-orange-800 hover:text-orange-600 hover:scale-90 scale-80 tex-base gap-x-2 opacity-90 hover:opacity-100" href={href}>
         
         
+        <div class="lg:hidden">
+            <slot name="before-text" />
 
-        <slot name="before-text" />
-        
+        </div>
         
         <div class="hidden lg:block">
 
