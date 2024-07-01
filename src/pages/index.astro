@@ -1,20 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import ContainerGrid from '../components/ContainerGrid.astro';
-import ContainerSimple from '../components/ContainerSimple.astro';
 import CourseCard from '../components/courses/CourseCard.astro';
 import HeaderNew from '../components/HeaderNew.astro';
+import InstaCard from '../components/posts/InstaCard.astro'
 ---
 
 <Layout title="Meka.dev">
 	<HeaderNew slot="header"/>
     <div class="mt-36 sm:mt-40" />
 
-    <div>
+    <div class="mb-8">
         <h1 class="text-5xl text-white md:text-6xl tracking-tighter px-4 font-bold text-center">Bienvenido a Me<span class="text-orange-600">k</span>a.dev <span class="hidden md:inline">- Aprende sobre programación y desarrollo web. </h1></span>
-        <p class=" text-white text-center mx-auto text-xl mt-4 px-3 md:px-36">
-            En <span class="font-semibold">Meka.dev</span> nos encargamos de que seas capaz de plasmar tus proyectos relacionados con la programación y hacerlos realidad. <span class="hidden md:inline">Contamos con contenido y material de aprendizaje de primera calidad. Si quieres aprender a programar de una manera <span class="font-light text-orange-600">rápida</span> y <span class="font-light text-orange-600">sencilla</span>, <br> ¿Y por qué no? <span class=" text-orange-600">divertida</span>, síguenos en Instagram. </span>
+        <p class=" text-white text-center mx-auto text-md mt-4 px-3 md:px-36">
+            En <span class="font-semibold">Meka.dev</span> nos encargamos de que seas capaz de plasmar tus proyectos relacionados con la programación y hacerlos realidad. <span class="hidden md:inline">Contamos con contenido y material de aprendizaje de primera calidad. Si quieres aprender a programar de una manera <span class="font-light text-orange-600">rápida</span> y <span class="font-light text-orange-600">sencilla</span>,  ¿Y por qué no? <span class=" text-orange-600">divertida</span>, síguenos en Instagram. </span>
         </p>
 
         <div class="flex flex-col md:flex-row gap-3 justify-center py-4 px-16">
@@ -25,41 +23,16 @@ import HeaderNew from '../components/HeaderNew.astro';
         
 
     </div>
-<!-- 
-    <ContainerGrid tittle='CURSOS DE DESARROLLO.' explora='Explora más cursos.' href='/courses'>
 
-        <Card link="/courses/Python" picture='photos/courses/Python.png' tittle='Curso de Python' description='Recopilacion de posts de Meka.Dev acerca de Python' etiquetas={["Programacion", "Python"]}/>
-
-        <Card link="/courses/JavaScript" picture='photos/courses/JavaScript.png' tittle='Curso de JavaScript' description='Recopilacion de posts de Meka.Dev acerca de JS' etiquetas={["Programacion", "JS"]}/>
-
-        <div class=" hidden lg:block">
-            <Card link="/courses/HTML" picture='photos/courses/HTML.png' tittle='Curso de HTML' description='Recopilacion de posts de Meka.Dev acerca de HTML' etiquetas={["Programacion", "HTML"]}/>
-        </div>    
-    </ContainerGrid>
-
-    <ContainerGrid tittle='PUBLICACIONES DE INSTAGRAM.' explora='Explora más posts.' href='https://www.instagram.com/meka.dev?igsh=MWV1dTE1b2Vydjg3Zw=='>
-     
-        <Card link='https://www.instagram.com/p/C3tj4nYOvpn/?igsh=aTdqcjJhemd5cGVn' picture='photos/postsImages/p0001.jpg' tittle='Programación Orientada a Objetos' description='Conceptos Básicos del POO' etiquetas={["Programacion", "Python"]}/>
-
-        <Card link="https://www.instagram.com/p/C3EcONhOgKB/?igsh=d3l0ZGQzYTE5Y24z" picture='photos/postsImages/p0003.jpg' tittle='¿Por qué deberías de usar Python?' description='Carácteristicas de Python' etiquetas={["Programacion", "Python"]}/>
+    <div class="p-4 my-10"> <!--Seccion de los Cursos -->
             
-        <div class=" hidden lg:block">
-            <Card link='https://www.instagram.com/p/C3EcONhOgKB/?igsh=d3l0ZGQzYTE5Y24z' picture='photos/postsImages/p0002.jpg' tittle='Aprende a Programar desde Cero' description='Conceptos Básicos de programación' etiquetas={["Programacion", "Python"]}/>
-        </div>
-    </ContainerGrid>
- -->
-
-    <div class=""> <!--Seccion de los Cursos -->
-        
-        <div class="lg:flex my-4">
+        <div class="lg:flex">
             <div>
                 <h2 class="text-white font-bold text-2xl p-4 -mb-2 lg:text-5xl">Explora y Aprende con Nuestros Cursos</h2>
-                 <a class="text-white font-semibold text-sm p-4 hover:text-orange-600 transition-all ease-in-out duration-200" href="">Ver Todos los Cursos »</a>
+                <a class="text-white font-semibold text-sm p-4 hover:text-orange-600 transition-all ease-in-out duration-200" href="">Ver Todos los Cursos »</a>
             </div>
             <p class="px-4 my-4 mb-8 text-sm lg:w-1/2 mt-6  text-gray-300 text-opacity-80">Todos nuestros cursos son fáciles de comprender, además de que muchos de ellos traen consigo ejemplos prácticos a la hora de programar. No te quedes con las ganas de aprender algo nuevo mientras estés en Meka.dev</p>
         </div>
-        
-
         
         <div class="flex flex-col md:grid md:grid-cols-2 lg:flex lg:flex-row">
             
@@ -76,8 +49,35 @@ import HeaderNew from '../components/HeaderNew.astro';
             </CourseCard>
         </div>
     </div>
-    
-    <div class="p-4 py-20"> <!-- Seccion del FAQ -->
+
+    <div class="p-4 py-10"> <!--Seccion de Instagram Posts -->
+        <div class="text-center">
+            <p class="font-semibold text-white">INSTAGRAM</p>
+            <h3 class="font-bold text-3xl md:text-4xl text-orange-600">Mira Reels, y  Carruseles de Instagram</h3>
+            <p class="font-semibold text-gray-300 text-opacity-80 text-lg px-2 py-4 md:px-52">Siguiéndonos en Instagram podrás disfrutar de nuestro contenido y también interactuar con nosotros mediante Stories. Les agradecemos cada pequeña interacción.</p>
+        </div>
+        
+        <div class="flex flex-col md:flex md:flex-row">
+
+           <InstaCard picture='photos/postsImages/p0001.jpg' alt='Conceptos Básicos del POO' link='https://www.instagram.com/p/C3tj4nYOvpn/'>
+           </InstaCard>
+
+           <InstaCard picture ='photos/postsImages/p0002.jpg' alt='¿Por qué deberías de usar Python?' link='https://www.instagram.com/p/C3K3p0nuPvR/'>
+           </InstaCard>
+
+           <InstaCard picture='photos/postsImages/p0003.jpg' alt='Conceptos Básicos de programación' link='https://www.instagram.com/p/C3EcONhOgKB/'>
+           </InstaCard>
+
+           
+        </div>
+        <div class="text-center">
+            <a class="text-white font-semibold text-sm p-4 hover:text-orange-600 transition-all ease-in-out duration-200" href="https://www.instagram.com/meka.dev?igsh=MWV1dTE1b2Vydjg3Zw==">Ver todos los posts »</a>
+        </div>
+        
+
+    </div>
+
+    <div class="p-4 py-10"> <!-- Seccion del FAQ -->
         <div class="text-center">
             <p class="font-semibold text-white">FAQS</p>
             <h3 class="font-bold text-3xl md:text-4xl text-orange-600">Frequently Asked Questions</h3>
