@@ -50,47 +50,63 @@ import HeaderNew from '../components/HeaderNew.astro';
  -->
 
     <div class=""> <!--Seccion de los Cursos -->
-        <h2 class="font-bold text-2xl p-4 -mb-2">Explora y Aprende con Nuestros Cursos</h2>
-        <a class=" font-semibold text-sm p-4 hover:text-orange-600 transition-all ease-in-out duration-200" href="">Ver Todos los Cursos »</a>
+        
+        <div class="lg:flex my-4">
+            <div>
+                <h2 class="text-white font-bold text-2xl p-4 -mb-2 lg:text-5xl">Explora y Aprende con Nuestros Cursos</h2>
+                 <a class="text-white font-semibold text-sm p-4 hover:text-orange-600 transition-all ease-in-out duration-200" href="">Ver Todos los Cursos »</a>
+            </div>
+            <p class="px-4 my-4 mb-8 text-sm lg:w-1/2 mt-6  text-gray-300 text-opacity-80">Todos nuestros cursos son fáciles de comprender, además de que muchos de ellos traen consigo ejemplos prácticos a la hora de programar. No te quedes con las ganas de aprender algo nuevo mientras estés en Meka.dev</p>
+        </div>
+        
 
-        <p class="px-4 my-4">The blog is used to display AstroWind documentation. Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS. Astro is a very interesting technology. Thanks.</p>
+        
+        <div class="flex flex-col md:grid md:grid-cols-2 lg:flex lg:flex-row">
+            
+            <CourseCard title='Aprende JavaScript' picture='photos/courses/JavaScript.png' description='Empieza tu viaje en JavaScript, el lenguaje de programacion más usado, Con este curso garantizamos que domines las nociones básicas del lenguaje. ¡Explora nuestro curso ya!' alt='' date='' link=''>
+            </CourseCard>
+            
+            <CourseCard title='Aprende Python' picture='photos/courses/Python.png' description='Python es sin duda un lenguaje muy potente con muchisimas utilidades, puede ser empleado para desarrollar aplicaciones de windows, inteligencia artificial, el backend de paginas webs, etc.' alt='' date='' link=''>
+            </CourseCard>
 
-        <CourseCard title='Aprende HTML' picture='photos/courses/HTML.png' description='Start your web journey with AstroWind – harness Astro and Tailwind CSS for a stunning site. Explore our guide now.' alt='' date='' link=''>
+            <CourseCard title='Aprende HTML' picture='photos/courses/HTML.png' description='¿Quieres convertirte en un desarrollador web? Pues antes de caminar aprende a gatear, con nuestro curso de HTML sabrás toda la estructura de una página web.' alt='' date='' link=''>
+            </CourseCard>
 
-
-        </CourseCard>
+            <CourseCard title='Aprende C++' picture='photos/courses/C++.png' description='C++ es un lenguaje de programación que proviene de la extensión del lenguaje C. Es un lenguaje orientado a objetos que se ha hecho muy popular. Comienza a aprenderlo desde ya.' alt='' date='' link=''>
+            </CourseCard>
+        </div>
     </div>
     
     <div class="p-4 py-20"> <!-- Seccion del FAQ -->
         <div class="text-center">
             <p class="font-semibold text-white">FAQS</p>
             <h3 class="font-bold text-3xl md:text-4xl text-orange-600">Frequently Asked Questions</h3>
-            <p class="font-semibold text-gray-300 text-opacity-80 text-lg px-2 py-4 md:px-52">Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey.</p>
+            <p class="font-semibold text-gray-300 text-opacity-80 text-lg px-2 py-4 md:px-52">Nuestra comunidad está en crecimiento. Algunas de las preguntas frecuentes que nos han hecho son estas:</p>
         </div>
         
         <div class="flex flex-col md:grid md:grid-cols-2">
             <div>
-                <h4 class="text-white flex items-center font-bold text-xl mt-4"><svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#ea580c"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>Why AstroWind?</h4>
+                <h4 class="text-white flex items-center font-bold text-xl mt-4"><svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#ea580c"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>¿Qué hace diferente a Meka?</h4>
                 
-                <p class="py-3 px-7 text-gray-300 text-opacity-80">Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.</p>    
+                <p class="py-3 px-7 text-gray-300 text-opacity-80">Si algo de nosotros destacara, eso sería el gran vínculo con nuestra comunidad que tenemos y las ganas apasionadas de interactuar con ustedes. ¡Unéte y forma parte de la diversion!</p>    
             </div>
             
             <div>
-                <h4 class="text-white flex items-center font-bold text-xl mt-4"><svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#ea580c"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>What do I need to start?</h4>
+                <h4 class="text-white flex items-center font-bold text-xl mt-4"><svg xmlns="http://www.w3.oWrg/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#ea580c"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>¿Dónde puedo hacer Feedback?</h4>
                 
-                <p class="py-3 px-7 text-gray-300 text-opacity-80">Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.</p>    
+                <p class="py-3 px-7 text-gray-300 text-opacity-80">Para ponerte en contacto con nosotros, ya sea para negocios o feedback, puedes enviarnos un correo o un mensaje directo a nuestra cuenta de Instagram</p>    
             </div>
 
             <div>
-                <h4 class="text-white flex items-center font-bold text-xl mt-4"><svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#ea580c"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>How to install the Astro + Tailwind CSS template?</h4>
+                <h4 class="text-white flex items-center font-bold text-xl mt-4"><svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#ea580c"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>¿No tienen Telegram?</h4>
                 
-                <p class="py-3 px-7 text-gray-300 text-opacity-80">Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.</p>    
+                <p class="py-3 px-7 text-gray-300 text-opacity-80">Por supuesto que tenemos <a class="text-orange-600 hover:text-opacity-80" href="https://t.me/meka_dev">Telegram</a>, si quieres formar parte de la comunidad y estar al tanto de todas nuestras noticias te recomendamos que te pases por allá. </p>    
             </div>
 
             <div>
-                <h4 class="text-white flex items-center font-bold text-xl mt-4"><svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#ea580c"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>What's something that you don't understand?</h4>
+                <h4 class="text-white flex items-center font-bold text-xl mt-4"><svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#ea580c"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>¿Qué necesito para comenzar a Programar?</h4>
                 
-                <p class="py-3 px-7 text-gray-300 text-opacity-80">A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.</p>    
+                <p class="py-3 px-7 text-gray-300 text-opacity-80">Creemos que solamente necesitas tres cosas. Un ordenador, Acceso a Nuestra página y Muchas muchas ganas de aprender y convertirte en un programador. Recuerda que si no superamos nuestros miedos se convertirán en nuestros límites.</p>    
             </div>
         
         </div>
