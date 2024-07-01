@@ -3,6 +3,8 @@ import PostLayout from '../layouts/PostLayout.astro';
 import Card from '../components/Card.astro';
 import HeaderSimplify from '../components/HeaderSimplify.astro';
 import ContainerGrid from '../components/ContainerGrid.astro';
+import CourseCard from '../components/courses/CourseCard.astro';
+import { fade } from 'astro:transitions';
 ---
 
 <PostLayout title="Meka.dev | Posts">
@@ -11,22 +13,24 @@ import ContainerGrid from '../components/ContainerGrid.astro';
 
     <div class="mt-20">
         
-        <ContainerGrid tittle='Cursos Recientes' explora='' href=''>
-            <Card link="/courses/Python" picture='photos/courses/Python.png' tittle='Curso de Python' description='Recopilacion de posts de Meka.Dev acerca de Python' etiquetas={["Programacion", "Python"]}/>
+        <h2 class="text-white text-center font-extrabold text-3xl md:text-4xl mb-2 px-4 ">Nuestros Cursos</h2>
+        <p class="font-semibold text-center text-gray-300 text-opacity-80 text-lg  mb-10 px-3 md:px-40 xl:px-80">Todos nuestros cursos son fáciles de comprender, además de que muchos de ellos traen consigo ejemplos prácticos a la hora de programar.</p>
 
-            <Card link="/courses/JavaScript" picture='photos/courses/JavaScript.png' tittle='Curso de JavaScript' description='Recopilacion de posts de Meka.Dev acerca de JS' etiquetas={["Programacion", "JS"]}/>
+        <div class="flex flex-col gap-10">
 
-            <Card link="/courses/HTML" picture='photos/courses/HTML.png' tittle='Curso de HTML' description='Recopilacion de posts de Meka.Dev acerca de HTML' etiquetas={["Programacion", "HTML"]}/>
-        </ContainerGrid>
-        
-        <ContainerGrid tittle='Cursos' explora='' href=''>
-            <Card link='' picture=' ../Red.jpg' tittle='Un post' description='Esto es una pruebade un post' etiquetas={["Programacion", "Python", "C++"]}/>
-            <Card link='' picture=' ../Red.jpg' tittle='Un post' description='Esto es una pruebade un post' etiquetas={["Programacion", "Python", "C++"]}/>
-            <Card link='' picture=' ../Red.jpg' tittle='Un post' description='Esto es una pruebade un post' etiquetas={["Programacion", "Python", "C++"]}/>
-            <Card link='' picture=' ../Red.jpg' tittle='Un post' description='Esto es una pruebade un post' etiquetas={["Programacion", "Python", "C++"]}/>
-            <Card link='' picture=' ../Red.jpg' tittle='Un post' description='Esto es una pruebade un post' etiquetas={["Programacion", "Python", "C++"]}/>
-            <Card link='' picture=' ../Red.jpg' tittle='Un post' description='Esto es una pruebade un post' etiquetas={["Programacion", "Python", "C++"]}/>
-        </ContainerGrid>
+
+            <CourseCard title='Aprende JavaScript' picture='photos/courses/JavaScript.png' alt='Logo de JavaScript' description='Empieza tu viaje en JavaScript, el lenguaje de programacion más usado, Con este curso garantizamos que domines las nociones básicas del lenguaje. ¡Explora nuestro curso ya!' date='7 junio 2024' link='courses/javascript' preview={false} etiquetas={["JavaScript"]}>
+            </CourseCard>
+
+            <CourseCard title='Aprende Python' picture='photos/courses/Python.png' description='Python es sin duda un lenguaje muy potente con muchisimas utilidades, puede ser empleado para desarrollar aplicaciones de windows, inteligencia artificial, el backend de paginas webs, etc.' alt='Logo de Python' date='6 junio 2024' link='' preview={false} etiquetas={["Python"]}>
+            </CourseCard>
+
+            <CourseCard title='Aprende HTML' picture='photos/courses/HTML.png' description='¿Quieres convertirte en un desarrollador web? Pues antes de caminar aprende a gatear, con nuestro curso de HTML sabrás toda la estructura de una página web.' alt='Logo de HTML' date='5 junio 2024' link='' preview={false} etiquetas={["HTML"]}>
+            </CourseCard>
+
+            <CourseCard title='Aprende C++' picture='photos/courses/C++.png' description='C++ es un lenguaje de programación que proviene de la extensión del lenguaje C. Es un lenguaje orientado a objetos que se ha hecho muy popular. Comienza a aprenderlo desde ya.' alt='Logo de C++' date='4 junio 2024' link='' preview={false} etiquetas={["C++"]}>
+            </CourseCard>
+        </div>
     </div>
 </PostLayout>
 

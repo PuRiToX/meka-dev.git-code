@@ -5,19 +5,66 @@ interface Props {
     alt: string,
     description: string,
     date: string,
-    link: string
+    link: string,
+    preview:boolean,
+    etiquetas?: Array<string>
 }
 
-const {title,picture,description,alt,date,link} = Astro.props
+const {title,picture,description,alt,date,link, preview, etiquetas} = Astro.props
 ---
+{
+()=>{
+    if(preview){
+        return  <div class="">
+                    <a href={link}>
+                        <img class="rounded-3xl p-4 hover:scale-90 transition-all ease-in-out duration-200" src={picture} alt={alt}>
+                    </a>
+                    <a href={link}>
+                        <h3 class="text-white font-bold text-xl px-4 hover:text-orange-600 transition-all ease-in-out duration-200">{title}</h3>
+                    </a>
+                    <p class="px-4 text-gray-300 text-opacity-80">{description}</p>
 
-<div class="">
-    <a href="/">
-        <img class="rounded-3xl p-4 hover:scale-90 transition-all ease-in-out duration-200" src={picture} alt={alt}>
-    </a>
-    <a href="">
-        <h3 class="text-white font-bold text-xl px-4 hover:text-orange-600 transition-all ease-in-out duration-200">{title}</h3>
-    </a>
-    <p class="px-4 text-gray-300 text-opacity-80">{description}</p>
+                </div>
 
-</div>
+    
+    }else{
+        return  <div class="flex flex-col md:flex-row max-w-prose md:max-w-4xl mx-auto">
+                    <div>
+                        <a href={link}>
+                            <img class="rounded-3xl p-4 md:max-w-md" src={picture} alt={alt}>
+                        </a>
+                    </div>
+
+                    <div>
+                        <p class=" text-white flex gap-1 text-xs px-4 items-center opacity-80 mt-2 mb-1">
+                            <svg width="14"  height="14"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M12 7v5l3 3" /></svg>
+                            
+                            {date}
+                        </p>
+
+                        <a href={link} class="text-white text-xl font-bold px-4 hover:text-orange-600 transition-all ease-in-out duration-200">{title}</a>
+
+                        <p class="px-4 text-gray-300 text-opacity-80 mt-1.5">{description}</p> 
+
+                        <div class="flex gap-2 ml-4 mt-4">
+                            
+                            {etiquetas?.map(etiqueta => {
+                                return <label class="bg-orange-700 py-1 px-2 text-sm rounded-xl">{etiqueta}</label>
+                            })}
+
+                        </div>
+                    </div>
+                </div>
+
+    }
+
+
+
+
+
+
+
+
+
+
+}
