@@ -2,9 +2,9 @@
 import HeaderButtom from "./HeaderButtom.astro"
 
 ---
-<header class="fixed w-screen bg-neutral-900 z-10">
+<header class="fixed w-screen z-20 ">
 
-    <div class=" sm:p-6 p-3">
+    <div class=" sm:p-6 p-3 bg-neutral-900 ">
         <div class="flex flex-row justify-between">
             
             <div class="flex justify-center sm:justify-normal items-center ">
@@ -42,7 +42,22 @@ import HeaderButtom from "./HeaderButtom.astro"
             </div>
         </div>
     </div>
-    <div class="sm:block hidden bg-neutral-800 p-1.5">
+    <div id="miDiv" class="sm:block hidden bg-neutral-800 p-1.5 transition-all ease-in-out duration-500 absolute w-full -z-20">
         <p class="text-center mx-auto text-gray-300  text-md font-light">Agencia de coding dirigida generalmente a programadores principiantes. <span> Programar es divertido si es con nosotros. </span>
     </div>
 </header>
+
+<script>
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+    var slide = document.getElementById("miDiv");
+        if(slide){
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                slide.style.transform = "translateY(-100%)";
+            } else {
+                slide.style.transform = "translateY(0)";
+            }
+        }
+    }
+</script>
